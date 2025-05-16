@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+
+    <section class="header-home">
+      <header>
+         <div class="logo_link">
+          <a href="#" class="logo">ADORAÏM KADMIEL</a> 
+          <div class="menu_link">
+              <a href="index.html">Home</a>
+              <a href="annonce.html">annonces</a>
+              <a href="about.html">A propos</a>
+              <a href="contact.html">Contact Us</a>
+             
+          </div>
+      </div>
+      <div id="mysidebar" class="sidebar">
+          <div class="closebtn" >
+             <span onclick="ferme()"> ferme</span>
+
+
+          </div>
+            <a href="index.html">Home</a>
+              <a href="annonce.html">annonces</a>
+              <a href="about.html">A propos</a>
+              <a href="contact.html">Contact Us</a>
+      </div>
+      <div id="main">
+          <button class="openbtn"  onclick="openNav()">
+              
+                Menu
+          </button>
+        
+      </div>
+            <div class="link_button">
+              <a href="connexion.html">Login</a>
+              <a href="#" class="orange_link">Sign up</a>
+           </div>
+          
+        
+      </header>
+  </section>
+  
+  <div class="image_de_fond">
+    <h1>A chacun sa maison, A chacun sa parcelle</h1>
+    <div class="lou">
+      <div class="che">Tous les statuts</div>
+      <div class="ch">A louer</div>
+      <div class="ch">A vendre</div>
+    </div>
+    <div class="statu">
+      <div class="recher">
+        <label for="">Type de bien :</label>
+        <select>
+          <option value="">Type de bien</option>
+          <option value="">Maison</option>
+          <option value="">Appartement</option>
+        </select>
+        <input type="search" id="search" placeholder="Recherche...">
+        <button>Recherche</button>
+      </div>
+    </div>
+  </div>
+  
+<section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="slide">
+          <img src="Assets/IMAGE/pexels-photo-10658143.jpeg"  alt="Maison">
+          <p>Maison moderne à Abidjan</p>
+        </div>
+        <div class="slide">
+          <img src="Assets/IMAGE/pexels-photo-1080696.jpeg" >
+          <p>Appartement à Yopougon</p>
+        </div>
+        <div class="slide">
+          <img src="Assets/IMAGE/pexels-photo-1080721.jpeg" >
+          <p>Villa à Cocody</p>
+        </div>
+        <div class="slide">
+          <img src="Assets/IMAGE/pexels-photo-135620.webp" >
+          <p>Titre 4</p>
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+  </section>
+
+
+  <section class="vedette">
+    <h2>Biens en vedette</h2>
+  
+    <div class="filtres">
+      <select id="filtre-lieu">
+        <option value="">Tous les lieux</option>
+        <option value="Abidjan">Abidjan</option>
+        <option value="Yopougon">Yopougon</option>
+        <option value="Cocody">Cocody</option>
+      </select>
+  
+      <select id="filtre-type">
+        <option value="">Tous les types</option>
+        <option value="Maison">Maison</option>
+        <option value="Appartement">Appartement</option>
+      </select>
+  
+      <select id="filtre-prix">
+        <option value="">Tous les prix</option>
+        <option value="0-100000">Moins de 100.000</option>
+        <option value="100000-300000">100.000 à 300.000</option>
+        <option value="300000+">Plus de 300.000</option>
+      </select>
+    </div>
+  
+    
+    <div class="cartes" id="cartes">
+      <div class="carte" data-lieu="Abidjan" data-type="Maison" data-prix="150000">
+        <img src="Assets/IMAGE/pexels-photo-10658143.jpeg" alt="">
+        <h3>Maison moderne à Abidjan</h3>
+        <p>150.000 FCFA</p>
+        <p>Abidjan, Riviera</p>
+        <a href="#">Voir plus</a>
+      </div>
+  
+      <div class="carte" data-lieu="Yopougon" data-type="Appartement" data-prix="90000">
+        <img src="Assets/IMAGE/pexels-photo-1080696.jpeg" alt="">
+        <h3>Appartement à Yopougon</h3>
+        <p>90.000 FCFA</p>
+        <p>Yopougon, Niangon</p>
+        <a href="#">Voir plus</a>
+      </div>
+  
+      <div class="carte" data-lieu="Cocody" data-type="Maison" data-prix="350000">
+        <img src="Assets/IMAGE/pexels-photo-1080721.jpeg" alt="">
+        <h3>Villa à Cocody</h3>
+        <p>350.000 FCFA</p>
+        <p>Cocody, Angré</p>
+        <a href="#">Voir plus</a>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section id="cat-pop">
+    <h2>Catégories populaires</h2>
+    <div id="cat-grid">
+      <div class="cat-box villa">
+        <div class="cat-icon">🏡</div>
+        <h3>Villa</h3>
+      </div>
+      <div class="cat-box appart">
+        <div class="cat-icon">🏢</div>
+        <h3>Appart</h3>
+      </div>
+      <div class="cat-box studio">
+        <div class="cat-icon">🏠</div>
+        <h3>Studio</h3>
+      </div>
+      <div class="cat-box terrain">
+        <div class="cat-icon">🌄</div>
+        <h3>Terrain</h3>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section id="avis-sec">
+    <h2>Avis des clients</h2>
+    <div id="avis-box">
+      <div class="avis-card">
+        <img src="https://i.pravatar.cc/100?img=1" class="avatar">
+        <h3>Sarah</h3>
+        <div class="etoiles">⭐⭐⭐⭐⭐</div>
+        <p class="com">Service excellent, je recommande fortement !</p>
+      </div>
+      <div class="avis-card">
+        <img src="https://i.pravatar.cc/100?img=2" class="avatar">
+        <h3>Ali</h3>
+        <div class="etoiles">⭐⭐⭐⭐</div>
+        <p class="com">Très bon accueil, merci !</p>
+      </div>
+      <div class="avis-card">
+        <img src="https://i.pravatar.cc/100?img=3" class="avatar">
+        <h3>Maria</h3>
+        <div class="etoiles">⭐⭐⭐⭐⭐</div>
+        <p class="com">Rapide, simple, efficace !</p>
+      </div>
+    </div>
+  
+    <div id="form-avis">
+      <input type="text" id="nom" placeholder="Votre nom">
+      <textarea id="msg" placeholder="Votre avis..."></textarea>
+      <select id="note">
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐" selected>⭐⭐⭐⭐⭐</option>
+      </select>
+      <button onclick="ajoutAvis()">Ajouter</button>
+    </div>
+  </section>
+  
+
+
+
+
+  <section id="pourq">
+    <h2>Pourquoi nous choisir</h2>
+    <div id="choix-box">
+      <div class="choix-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Sécurité</h3>
+        <p>Vos données sont protégées.</p>
+      </div>
+      <div class="choix-card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>Support 24/7</h3>
+        <p>Assistance à tout moment.</p>
+      </div>
+      <div class="choix-card">
+        <i class="fa-solid fa-user-check"></i>
+        <h3>Agents vérifiés</h3>
+        <p>Des experts de confiance.</p>
+      </div>
+      <div class="choix-card">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        <h3>Pas de frais cachés</h3>
+        <p>Prix clairs et transparents.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <section id="publier">
+    <h2>Publier votre bien</h2>
+    <p>Mettez votre bien en avant en quelques clics.</p>
+    <button onclick="ouvrir()">Publier maintenant</button>
+  </section>
+
+  <div id="popup" class="cache">
+    <div id="contenu">
+      <span onclick="fermes()">&times;</span>
+      <h3>Ajouter un bien</h3>
+      <form id="formulaire">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="text" placeholder="Titre du bien" required>
+        <input type="number" placeholder="Prix en €" required>
+        <input type="file" required>
+        <textarea placeholder="Description..." rows="4" required></textarea>
+        <button type="submit" onclick="fermes()">Valider</button>
+      </form>
+    </div>
+  </div>
+ 
+
+  <section id="trouve" class="trouve">
+  <h2 >Trouvez votre maison à Cotonou</h2>
+  <p>Des maisons modernes, terrains bien situés et à bon prix.</p>
+  <a href="#biens">Voir les biens disponibles</a>
+</section>
+
+
+
+<footer>
+    <div class="ge">
+      
+      <div>
+        <h3>À propos</h3>
+        <p class="pp">Nous vous aidons à trouver la maison idéale à Cotonou et dans les environs. Simplicité, confiance, sécurité.</p>
+      </div>
+  
+      <div>
+        <h3>Liens rapides</h3>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Biens</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">A propos</a></li>
+        </ul>
+      </div>
+  
+      <div>
+        <h3 >Contacts</h3>
+        <p><i class="fas fa-phone"></i> +229 90 00 00 00</p>
+        <p><i class="fas fa-envelope"></i> info@immobilierbj.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Cotonou, Bénin</p>
+      </div>
+  
+      <div>
+        <h3>Réseaux sociaux</h3>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+      </div>
+  
+    </div>
+  
+    <div class="p">
+      &copy; 2025 Le Monde de l'immobilier. Tous droits réservés.
+    </div>
+  </footer>
+  
+  <script src="Assets/JS/script.js">
+  
+    </script>
+    
+    
+</body>
+</html>

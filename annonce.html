@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    #annonces {
+        padding: 40px;
+        background: #fff;
+        color: #000;
+    }
+    
+    .barre-recherche {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .grille-biens {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .carte {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f8f8f8;
+    }
+    
+    .carte img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .carte .contenu {
+        padding: 15px;
+    }
+    
+    .carte h3 {
+        margin: 0;
+        color: #f26440;
+    }
+    
+    .carte button {
+        background: #f26440;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+ </style>
+</head>
+<body>
+
+<section id="annonces">
+    <h2>Nos biens disponibles</h2>
+
+    <div class="barre-recherche">
+        <input type="text" id="recherche" placeholder="Rechercher...">
+        <select id="filtre-type">
+            <option value="">Tous les types</option>
+            <option value="villa">Villa</option>
+            <option value="studio">Studio</option>
+        </select>
+        <select id="filtre-prix">
+            <option value="">Tous les prix</option>
+            <option value="50000">Moins de 50.000 FCFA</option>
+            <option value="100000">Moins de 100.000 FCFA</option>
+        </select>
+        <select id="filtre-localisation">
+            <option value="">Tous les lieux</option>
+            <option value="cotonou">Cotonou</option>
+            <option value="calavi">Calavi</option>
+        </select>
+    </div>
+
+    <div class="grille-biens" id="grille-biens">
+      
+    </div>
+</section>
+<script>
+    const biens = [
+    {titre: "Villa moderne", prix: 80000, type: "villa", lieu: "cotonou", image: "/Assets/IMAGE/pexels-photo-10658143.jpeg"},
+    {titre: "Studio cosy", prix: 40000, type: "studio", lieu: "calavi", image: "/Assets/IMAGE/pexels-photo-1080696.jpeg"},
+    {titre: "Maison familiale", prix: 100000, type: "villa", lieu: "cotonou", image: "/Assets/IMAGE/pexels-photo-1827130.jpeg"},
+];
+
+const grille = document.getElementById("grille-biens");
+
+function afficherBiens(filtre = {}) {
+    grille.innerHTML = "";
+    const filtres = biens.filter(bien => {
+        return (!filtre.recherche || bien.titre.toLowerCase().includes(filtre.recherche.toLowerCase())) &&
+               (!filtre.type || bien.type === filtre.type) &&
+               (!filtre.lieu || bien.lieu === filtre.lieu) &&
+               (!filtre.prix || bien.prix <= filtre.prix);
+    });
+
+    filtres.forEach(bien => {
+        const carte = document.createElement("div");
+        carte.className = "carte";
+        carte.innerHTML = `
+            <img src="${bien.image}" alt="${bien.titre}">
+            <div class="contenu">
+                <h3>${bien.titre}</h3>
+                <p>Prix: ${bien.prix} FCFA</p>
+                <p>Lieu: ${bien.lieu}</p>
+                <button>Voir plus</button>
+            </div>
+        `;
+        grille.appendChild(carte);
+    });
+}
+
+
+afficherBiens();
+
+
+document.getElementById("recherche").addEventListener("input", () => appliquerFiltres());
+document.getElementById("filtre-type").addEventListener("change", () => appliquerFiltres());
+document.getElementById("filtre-prix").addEventListener("change", () => appliquerFiltres());
+document.getElementById("filtre-localisation").addEventListener("change", () => appliquerFiltres());
+
+function appliquerFiltres() {
+    const recherche = document.getElementById("recherche").value;
+    const type = document.getElementById("filtre-type").value;
+    const prix = parseInt(document.getElementById("filtre-prix").value) || null;
+    const lieu = document.getElementById("filtre-localisation").value;
+    afficherBiens({ recherche, type, prix, lieu });
+}
+
+</script>
+</body>
+<html>
