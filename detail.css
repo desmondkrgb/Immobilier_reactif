@@ -1,0 +1,38 @@
+.detail-bien {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+  }
+  
+  .image-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .contenu-detail {
+    padding: 20px;
+  }
+  
+  .contenu-detail h2 {
+    color: #f26440;
+    margin-bottom: 10px;
+  }
+  
+  .prix {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .desc {
+    margin: 10px 0 20px;
+  }
+  
+  .infos-detail p {
+    margin: 5px 0;
+  }
+  

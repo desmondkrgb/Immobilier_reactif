@@ -1,0 +1,37 @@
+.contact {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #f26440;
+    margin-bottom: 30px;
+  }
+  
+  #form-contact input,#form-contact textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #form-contact button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .info-contact {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+  

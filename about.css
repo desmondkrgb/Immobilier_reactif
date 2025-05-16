@@ -1,0 +1,22 @@
+.apropos {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .apropos h2 {
+    font-size: 32px;
+    color: #f26440;
+    margin-bottom: 20px;
+  }
+  
+  .apropos p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
