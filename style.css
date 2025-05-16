@@ -79,7 +79,7 @@ header .logo_link{
 
 .image_de_fond {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../IMAGE/pexels-photo-2119903.jpeg') no-repeat center center;
+    url('pexels-photo-2119903.jpeg') no-repeat center center;
   background-size: cover;
   color: white;
   font-family: 'Courier New', Courier, monospace;
@@ -511,7 +511,7 @@ img {
   }
   
   .trouve{
-    background: url('../IMAGE/pexels-photo-2199190.jpeg') center/cover no-repeat;
+    background: url('pexels-photo-2199190.jpeg') center/cover no-repeat;
      height: 80vh; 
      display: flex; 
      width: 100%;
